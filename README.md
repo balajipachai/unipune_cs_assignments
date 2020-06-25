@@ -5,6 +5,10 @@ However, expect all the programs to be at one place soon.
 
 # Steps for Executing a Program
 1. Go to the main directory (for eg: simple_loops)
-2. Set A, Set B and Set C programs are in a,b and c directory respectively.
-3. An executable file has been created for each program.
-4. Execute the program by ./nameOfTheExecutable
+2. Set A, Set B and Set C programs are named as follows:
+  - Set A Problem 1 => seta_1.c and similary for Set B and Set C
+4. Compile the program
+  - gcc seta_1.c
+  - ./a.out
+  - Provide user inputs
+  - Done
