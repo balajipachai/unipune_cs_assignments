@@ -40,7 +40,7 @@ void writeFile(EMPLOYEE_RECORD *array, int numberOfRecords, int whichSort)
     FILE *fp;
     if (!whichSort)
     {
-        if ((fp = fopen("./resources/sortedEmployeesBubbleSort.txt", "w")) != NULL)
+        if ((fp = fopen("./resources/sortedEmployeesBubbleSortOnAge.txt", "w")) != NULL)
         {
             printf("File opened successfully for writing\n");
             for (int i = 0; i < numberOfRecords; i++)
@@ -57,7 +57,7 @@ void writeFile(EMPLOYEE_RECORD *array, int numberOfRecords, int whichSort)
     }
     else
     {
-        if ((fp = fopen("./resources/sortedEmployeesInsertionSort.txt", "w")) != NULL)
+        if ((fp = fopen("./resources/sortedEmployeesInsertionSortOnAge.txt", "w")) != NULL)
         {
             printf("File opened successfully for writing\n");
             for (int i = 0; i < numberOfRecords; i++)
