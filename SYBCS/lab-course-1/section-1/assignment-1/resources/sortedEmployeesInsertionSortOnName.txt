@@ -1,0 +1,16 @@
+	0	0
+Anne	23	43289
+Avinash	25	28341
+Balaji	27	23132
+Doe	35	87453
+Efron	37	34521
+Gaurav	25	27546
+Goldsmith	39	76543
+Jino	27	29012
+Manikutty	27	26500
+Michael	25	25000
+ODonnell	29	45670
+Rushikesh	25	24321
+Smith	28	27300
+Smith	45	93210
+Stevens	34	27450
