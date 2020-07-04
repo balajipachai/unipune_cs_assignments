@@ -40,7 +40,13 @@ int *bubbleSort(int *array, int numberOfElements)
                 array[i] = temp;
             }
         }
-    }
+        // This implies the array is already sorted
+        if (!swapCount)
+        {
+            printf("\n The array is already sorted\n\n");
+            break;
+        }
+        }
     printf("\nNumber of swaps made = %d\n\n", swapCount);
     return array;
 }

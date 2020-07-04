@@ -35,6 +35,12 @@ int *insertionSort(int *array, int numberOfElements)
             array[j + 1] = array[j];
             j -= 1;
         }
+        // This implies the array is already sorted
+        if (!swapCount)
+        {
+            printf("\n The array is already sorted\n\n");
+            break;
+        }
         array[j + 1] = key;
     }
     printf("\nNumber of swaps made = %d\n\n", swapCount);
