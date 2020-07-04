@@ -27,6 +27,7 @@ int *insertionSort(int *array, int numberOfElements)
         key = array[i];
         j = i - 1;
 
+        // The < condition sorts the array in descending order
         while (j >= 0 && array[j] < key)
         {
             array[j + 1] = array[j];

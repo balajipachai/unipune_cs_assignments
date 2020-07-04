@@ -29,6 +29,7 @@ int *bubbleSort(int *array, int numberOfElements)
     {
         for (int i = pass + 1; i <= numberOfElements; i++)
         {
+            // The < condition sorts the array in descending order
             if (array[pass] < array[i])
             {
                 // swap the elements
