@@ -46,7 +46,14 @@ int *bubbleSort(int *array, int numberOfElements)
             printf("\n The array is already sorted\n\n");
             break;
         }
+        // To print array after every swap
+        printf("\nArray after %d swap\n\n", pass);
+        for (int i = 0; i < numberOfElements; i++)
+        {
+            printf("%d\t", array[i]);
         }
+        printf("\n");
+    }
     printf("\nNumber of swaps made = %d\n\n", swapCount);
     return array;
 }
