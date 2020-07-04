@@ -22,6 +22,7 @@ int *generateArray(int *baseAddress, int numberOfElements)
 int *insertionSort(int *array, int numberOfElements)
 {
     int key, j;
+    int swapCount = 0;
     for (int i = 0; i < numberOfElements; i++)
     {
         key = array[i];
@@ -30,11 +31,13 @@ int *insertionSort(int *array, int numberOfElements)
         // The < condition sorts the array in descending order
         while (j >= 0 && array[j] < key)
         {
+            swapCount += 1;
             array[j + 1] = array[j];
             j -= 1;
         }
         array[j + 1] = key;
     }
+    printf("\nNumber of swaps made = %d\n\n", swapCount);
     return array;
 }
 

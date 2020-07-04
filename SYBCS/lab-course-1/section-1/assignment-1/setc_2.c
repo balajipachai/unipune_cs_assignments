@@ -25,6 +25,7 @@ int *generateArray(int *baseAddress, int numberOfElements)
 int *bubbleSort(int *array, int numberOfElements)
 {
     int temp = 0;
+    int swapCount = 0;
     for (int pass = 0; pass < numberOfElements; pass++)
     {
         for (int i = pass + 1; i <= numberOfElements; i++)
@@ -32,6 +33,7 @@ int *bubbleSort(int *array, int numberOfElements)
             // The < condition sorts the array in descending order
             if (array[pass] < array[i])
             {
+                swapCount += 1;
                 // swap the elements
                 temp = array[pass];
                 array[pass] = array[i];
@@ -39,6 +41,7 @@ int *bubbleSort(int *array, int numberOfElements)
             }
         }
     }
+    printf("\nNumber of swaps made = %d\n\n", swapCount);
     return array;
 }
 
