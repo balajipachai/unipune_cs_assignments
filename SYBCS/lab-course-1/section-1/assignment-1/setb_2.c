@@ -83,7 +83,7 @@ EMPLOYEE_RECORD *bubbleSort(EMPLOYEE_RECORD *array, int numberOfElements)
     char *tempName;
     for (int pass = 0; pass < numberOfElements; pass++)
     {
-        for (int i = pass + 1; i <= numberOfElements; i++)
+        for (int i = pass + 1; i < numberOfElements; i++)
         {
             if (strcmp(array[pass].name, array[i].name) > 0)
             {

@@ -27,7 +27,7 @@ int *bubbleSort(int *array, int numberOfElements)
     int temp = 0;
     for (int pass = 0; pass < numberOfElements; pass++)
     {
-        for (int i = pass + 1; i <= numberOfElements; i++)
+        for (int i = pass + 1; i < numberOfElements; i++)
         {
             if (array[pass] > array[i])
             {
