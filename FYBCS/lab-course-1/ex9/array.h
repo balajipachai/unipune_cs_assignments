@@ -38,3 +38,62 @@ void acceptArray(int *array, int numberOfElements)
         scanf("%d", &array[i]);
     }
 }
+
+int *insertionSort(int *array, int numberOfElements)
+{
+    int key, j;
+    for (int i = 0; i < numberOfElements; i++)
+    {
+        key = array[i];
+        j = i - 1;
+
+        while (j >= 0 && array[j] > key)
+        {
+            array[j + 1] = array[j];
+            j -= 1;
+        }
+        array[j + 1] = key;
+    }
+    return array;
+}
+
+/**
+ * Function that sorts an array using Bubble Sort
+*/
+int *bubbleSort(int *array, int numberOfElements)
+{
+    int temp = 0;
+    for (int pass = 0; pass < numberOfElements; pass++)
+    {
+        for (int i = pass + 1; i < numberOfElements; i++)
+        {
+            if (array[pass] > array[i])
+            {
+                // swap the elements
+                temp = array[pass];
+                array[pass] = array[i];
+                array[i] = temp;
+            }
+        }
+    }
+    return array;
+}
+
+/**
+ * Function to remove the duplicate elements from array
+*/
+int *removeDuplicate(int *array, int numberOfElements)
+{
+    int key = 0;
+    for (int i = 0; i < numberOfElements; i++)
+    {
+        for (int j = i + 1; j < numberOfElements; j++)
+        {
+            if (array[i] == array[j])
+            {
+                array[i] = 0;
+            }
+        }
+    }
+    return array;
+}
