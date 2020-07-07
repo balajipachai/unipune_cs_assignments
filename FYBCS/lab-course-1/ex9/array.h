@@ -32,7 +32,6 @@ void printArray(int *array, int numberOfElements)
 */
 void acceptArray(int *array, int numberOfElements)
 {
-    printf("Enter the elements::: ");
     for (int i = 0; i < numberOfElements; i++)
     {
         scanf("%d", &array[i]);
