@@ -12,3 +12,4 @@ However, expect all the programs to be at one place soon.
   - ./a.out
   - Provide user inputs
   - Done
+5. In FYBCS in some exercises you will find there are directories namely a, b and c that contains the programs.
