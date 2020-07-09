@@ -79,6 +79,40 @@ int *bubbleSort(int *array, int numberOfElements)
 }
 
 /**
+ * Function to find an element in the array using Binary Search
+ * Compare x with the middle element.
+ * If x matches with middle element, we return the mid index.
+ * Else If x is greater than the mid element, then x can only lie in right half subarray 
+ *     after the mid element.
+ * So we recur for right half.
+ * Else (x is smaller) recur for the left half.
+ * lb = lower bound
+ * ub = upper bound
+*/
+int binarySearch(int *array, int lb, int ub, int thisValueExists)
+{
+    if (ub >= lb)
+    {
+        int midIndex = lb + (ub - lb) / 2;
+
+        if (array[midIndex] == thisValueExists)
+        {
+            return midIndex;
+        }
+
+        // if thisValueExists > array[midIndex] then it exists in the right sub array
+        if (thisValueExists > array[midIndex])
+        {
+            return binarySearch(array, midIndex + 1, ub, thisValueExists);
+        }
+
+        // else the value exists in the left sub array
+        return binarySearch(array, lb, midIndex - 1, thisValueExists);
+    }
+    return -1;
+}
+
+/**
  * Function to remove the duplicate elements from array
 */
 int *removeDuplicate(int *array, int numberOfElements)
