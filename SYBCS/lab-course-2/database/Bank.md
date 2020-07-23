@@ -13,7 +13,7 @@
   
   - `create table customer (id INT PRIMARY KEY AUTO_INCREMENT, name CHAR(20), street CHAR(15), city VARCHAR(20));`
   
-  - `create table branch (id INT PRIMARY KEY AUTO_INCREMENT, name CHAR(20) NOT NULL, city VARCHAR(20));`
+  - `create table branch (id INT PRIMARY KEY AUTO_INCREMENT, name CHAR(70) NOT NULL, city VARCHAR(50));`
   
   - `create table account (id INT PRIMARY KEY, type CHAR(10), balance FLOAT(8, 2), customer_id INT NOT NULL, branch_id INT NOT NULL, FOREIGN KEY(customer_id) REFERENCES customer(id) ON DELETE CASCADE ON UPDATE CASCADE, FOREIGN KEY(branch_id) REFERENCES branch(id) ON DELETE CASCADE ON UPDATE CASCADE);`
   
