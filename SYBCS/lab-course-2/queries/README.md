@@ -786,4 +786,6 @@
         WEIGHT_STRING
     ```
 
+#### COMMAND TO LOAD DATA FROM FILE INTO TABLE
 
+`LOAD DATA LOCAL INFILE 'path/to/file/.csv' INTO table branch FIELDS TERMINATED BY ',' (name, city)`
