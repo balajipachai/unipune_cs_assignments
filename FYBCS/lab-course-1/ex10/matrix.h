@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <bool.h>
+#include <stdbool.h>
 
 // TODO Change fixed array sizes to dynamic arrays
 /**
