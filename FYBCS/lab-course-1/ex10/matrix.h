@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <bool.h>
 
 // TODO Change fixed array sizes to dynamic arrays
 /**
@@ -80,4 +81,35 @@ void productOfMatrices(int mat1[10][10], int mat2[10][10], int product[10][10], 
     }
     printf("Sum = %d\n", sum);
   }
+}
+
+/**
+ * Checks if both the matrices are equal
+*/
+bool areMatricesEqual(int mat1[10][10], int mat2[10][10], int rows, int columns)
+{
+  bool isEqual = true;
+  for (int i = 0; i < rows; i++)
+  {
+    for (int j = 0; j < columns; j++)
+    {
+      if (mat1[i][j] != mat2[i][j])
+      {
+        isEqual = false;
+      }
+    }
+  }
+  return isEqual;
+}
+
+/**
+ * Function that checks whether the matrix is symmetric
+ * In linear algebra, a symmetric matrix is a square matrix that is equal to its transpose
+*/
+bool isSymmetric(int array[10][10], int rows, int columns)
+{
+  int transpose[10][10];
+  matrixTranspose(array, transpose, rows, columns);
+  bool isEqual = areMatricesEqual(array, transpose, rows, columns);
+  return isEqual;
 }
