@@ -113,3 +113,16 @@ bool isSymmetric(int array[10][10], int rows, int columns)
   bool isEqual = areMatricesEqual(array, transpose, rows, columns);
   return isEqual;
 }
+
+/**
+ * Function that calculates the trace of the matrix
+*/
+int matrixTrace(int array[10][10], int rows, int columns)
+{
+  int trace = 0;
+  for (int i = 0; i < rows; i++)
+  {
+    trace += array[i][i];
+  }
+  return trace;
+}
