@@ -9,13 +9,11 @@
 void acceptMatrix(int array[10][10], int rows, int columns)
 {
   int count = 0;
+  for (int i = 0; i < rows; i++)
   {
-    for (int i = 0; i < rows; i++)
+    for (int j = 0; j < columns; j++)
     {
-      for (int j = 0; j < columns; j++)
-      {
-        scanf("%d", &array[i][j]);
-      }
+      scanf("%d", &array[i][j]);
     }
   }
 }
