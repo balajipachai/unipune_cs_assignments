@@ -126,3 +126,65 @@ int matrixTrace(int array[10][10], int rows, int columns)
   }
   return trace;
 }
+
+/**
+ * Function that checks whether a matrix is Upper Triangular
+ * Uij = aij for i <= j
+ *     = 0   for i > j
+*/
+bool isUpperTriangular(int array[10][10], int rows, int columns)
+{
+  bool isUppTriangular = true;
+  for (int i = 0; i < rows; i++)
+  {
+    for (int j = 0; j < columns; j++)
+    {
+      if ((i > j) && (array[i][j] != 0))
+      {
+        isUppTriangular = false;
+      }
+    }
+  }
+  return isUppTriangular;
+}
+
+/**
+ * Function that checks whether a matrix is Lower Triangular
+ * Lij = aij for i >= j
+ *     = 0   for i < j
+*/
+bool isLowerTriangular(int array[10][10], int rows, int columns)
+{
+  bool isLowTriangular = true;
+  for (int i = 0; i < rows; i++)
+  {
+    for (int j = 0; j < columns; j++)
+    {
+      if ((i < j) && (array[i][j] != 0))
+      {
+        isLowTriangular = false;
+      }
+    }
+  }
+  return isLowTriangular;
+}
+
+/**
+ * Function that checks whether a matrix is an Identity Matrix
+*/
+bool isIdentityMatrix(int array[10][10], int rows, int columns)
+{
+  bool isDiagonalElementOnes = true;
+  bool isUppTriangular = isUpperTriangular(array, rows, columns);
+  bool isLowTriangular = isLowerTriangular(array, rows, columns);
+  for (int i = 0; i < rows; i++)
+  {
+    if (array[i][i] != 1)
+    {
+      isDiagonalElementOnes = false;
+    }
+  }
+  if (isDiagonalElementOnes && isUppTriangular && isLowTriangular)
+    return true;
+  return false;
+}
